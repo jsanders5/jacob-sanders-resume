@@ -1,5 +1,5 @@
 % ============================================================
-%  Jacob Sanders — Resume
+%  Jacob Sanders Resume
 %  Compiler: pdflatex (two passes for hyperref)
 %  Last updated: 2026
 % ============================================================
@@ -33,7 +33,7 @@
   {\large\bfseries\color{accent}}
   {}{0em}{\MakeUppercase}
   [\vspace{1pt}\color{accent}\rule{\linewidth}{0.6pt}]
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{6pt}{3pt}
 
 % ---- Lists --------------------------------------------------
 \usepackage{enumitem}
@@ -97,17 +97,16 @@
 % ============================================================
 \section{Summary}
 
-Forward-deployed / applied AI engineer and two-time founder who ships production
-systems end-to-end — from board bring-up to cloud-native SaaS — over 13+ years.
+Forward-deployed / applied AI engineer and two-time founder shipping production
+systems end-to-end, from board bring-up to cloud-native SaaS, over 13+ years.
 Thrives in ambiguous, high-ownership environments: scopes vague problems, ships
-working software in weeks rather than quarters, and iterates directly with users.
-Rare breadth-plus-depth profile — full-stack (React, Next.js, TypeScript, serverless
-AWS) built on deep systems foundations (bare-metal C/C++, BLE, distributed
-blockchain infrastructure) — with the domain-ramp speed to go from unfamiliar
-problem to shipped solution across wildly different verticals. AI-native builder:
-ships production LLM applications on the Claude API — multi-agent pipelines,
-structured extraction, semantic search, and context-grounded assistants — with
-guardrails, model-tiered cost control, and leak-free evaluation harnesses.
+working software in weeks, and iterates directly with users. Rare
+breadth-plus-depth profile, full-stack (React, Next.js, TypeScript, serverless AWS)
+built on deep systems foundations (bare-metal C/C++, BLE, blockchain
+infrastructure), with fast domain ramp across wildly different verticals.
+AI-native builder shipping production LLM applications on the Claude API:
+multi-agent pipelines, structured extraction, semantic search, guardrails, and
+leak-free evaluation harnesses.
 
 % ============================================================
 %  EXPERIENCE
@@ -128,27 +127,24 @@ guardrails, model-tiered cost control, and leak-free evaluation harnesses.
         manage settlement offers, and monitor collection status across active cases
 \end{itemize}
 
-\vspace{7pt}
+\vspace{5pt}
 
 % --- ARK Electronics ---
 \jobentry{ARK Electronics}{Remote}{Full-Stack Engineer \normalfont\small(1099 Contract)}{February 2025 -- April 2025}
 \begin{itemize}
   \item Embedded with the client to scope requirements from scratch and ship a
-        cloud-based manufacturing traceability platform end-to-end in weeks — covering
+        cloud-based manufacturing traceability platform end-to-end in weeks, covering
         product setup, serial number generation, barcode artifact creation, and
         test-result tracking for production and QA workflows
   \item Built a React/TypeScript/Vite (CoreUI) frontend and a fully serverless AWS
         backend using Lambda, AppSync (GraphQL), API Gateway (REST), DynamoDB,
         S3, and Cognito
-  \item Automated serial generation with collision checks and batch writes; generated
-        QR-code PDFs stored in S3; built test result ingestion and file upload endpoints
-        with a legacy data migration path
   \item Exposed dual API surfaces (GraphQL for the web UI, REST for external clients)
         with API key management, usage plans, throttling, and event-driven job status
         updates for long-running generation batches
 \end{itemize}
 
-\vspace{7pt}
+\vspace{5pt}
 
 % --- Honeydew ---
 \jobentry{The Honeydew App, Inc.}{Salt Lake City, UT (Remote)}{Founder}{April 2023 -- February 2025}
@@ -164,7 +160,7 @@ guardrails, model-tiered cost control, and leak-free evaluation harnesses.
         $\sim$90\% MVP completion before redirecting focus to a new venture
 \end{itemize}
 
-\vspace{7pt}
+\vspace{5pt}
 
 % --- Nerd United ---
 \jobentry{Nerd United}{Lehi, UT (Hybrid)}{Blockchain Engineer}{April 2022 -- April 2023}
@@ -172,16 +168,14 @@ guardrails, model-tiered cost control, and leak-free evaluation harnesses.
   \item Developed blockchain applications in Go and Solidity on EVM-based protocols
         for cryptocurrency clients; deployed 8 L1 GETH-based Proof-of-Authority
         testnets and 4 production mainnets \textit{(technology available on request)}
-  \item Wrote Go packages and Bash scripts to automate network provisioning, smart
-        contract deployment, wallet funding, and Docker-based contract testing
-  \item Built and deployed a production generative-AI pipeline in Python — orchestrating
+  \item Built and deployed a production generative-AI pipeline in Python, orchestrating
         the OpenAI image-generation API, IPFS pinning, ERC-721 contract deployment to
         Sepolia Testnet, and end-to-end NFT minting as an automated multi-step workflow
   \item Validated smart contract behavior using the Brownie framework; implemented
         security controls and access enforcement across blockchain infrastructure
 \end{itemize}
 
-\vspace{7pt}
+\vspace{5pt}
 
 % --- Skullcandy ---
 \jobentry{Skullcandy}{Park City, UT}{Firmware Architect}{October 2018 -- March 2022}
@@ -193,15 +187,12 @@ guardrails, model-tiered cost control, and leak-free evaluation harnesses.
         prototype through design validation, production validation, and mass-production
         release; owned Apple MFi certification compliance and served as primary liaison
         to Apple's MFi program office
-  \item Defined Bluetooth API contracts with third-party iOS/Android partners and
-        implemented the firmware command interface for headphone feature control
-        (EQ, battery reporting, device configuration)
   \item Authored a C\# desktop application for USB firmware updates and a Python
         CLI build-environment toolchain with automated regression tests, eliminating
         manual flashing and compressing nightly validation cycles
 \end{itemize}
 
-\vspace{7pt}
+\vspace{5pt}
 
 % --- Code Corporation ---
 \jobentry{Code Corporation}{Draper, UT}{Senior Firmware Engineer}{August 2013 -- October 2018}
@@ -209,13 +200,11 @@ guardrails, model-tiered cost control, and leak-free evaluation harnesses.
   \item Led 3--4 firmware engineers building advanced barcode reading systems from
         board bring-up through production; drove Agile/Scrum adoption within the team
   \item Reduced device firmware upgrade time from $\sim$3 min to $\sim$60 sec via USB
-        Mass Storage optimization — a 3$\times$ improvement in field servicing throughput
-  \item Implemented a secure bootloader, integrated a JavaScript engine for
-        runtime-configurable device behavior, and wrote BLE firmware for the Nordic
-        nRF52832 SoC
-  \item Contributed Linux kernel patches for image sensor, GPIO/PWM, and USB Mass
-        Storage support; implemented Apple MFi chip authentication, iAP2 protocol
-        stack, and bare-metal peripheral drivers (GPIO, PWM, vibration, LCD)
+        Mass Storage optimization, a 3$\times$ improvement in field servicing throughput
+  \item Implemented a secure bootloader and BLE firmware for the Nordic nRF52832 SoC;
+        contributed Linux kernel patches for image sensor, GPIO/PWM, and USB Mass
+        Storage support; implemented Apple MFi chip authentication and the iAP2
+        protocol stack
 \end{itemize}
 
 % ============================================================
@@ -243,38 +232,34 @@ guardrails, model-tiered cost control, and leak-free evaluation harnesses.
 % ============================================================
 \section{Projects}
 
-\noindent\textbf{Sentics --- Multi-Agent Crypto Signal Pipeline}
+\noindent\textbf{Sentics: Multi-Agent Crypto Signal Pipeline}
 \hfill\textcolor{muted}{\small Python, Claude API, Next.js, Supabase, Vercel}\\
-Serverless multi-agent pipeline that screens top crypto assets: a deterministic
-technical-analysis stage sets directional calls, a Claude (Sonnet) synthesis stage
-writes rationale under a strict output whitelist so it can never override the
-ground-truth classification, and a Claude (Haiku) stage distills news into structured
-sentiment/catalyst reads. Model-tiered for cost (88\% run-cost reduction),
-self-chaining batches keep each invocation under the serverless time limit, and a
-leak-free forward-tracking eval harness scores live directional calls against realized
-returns (edge, hit-rate, Sharpe, t-stat).
+Serverless multi-agent pipeline screening top crypto assets: a deterministic
+technical-analysis stage sets directional calls, a Claude synthesis stage writes
+rationale under a strict output whitelist (can't override ground truth), and a
+second Claude stage distills news into structured sentiment reads. Model-tiered
+for cost (88\% run-cost reduction) with a leak-free forward-tracking eval harness
+scoring live calls against realized returns (edge, hit-rate, Sharpe, t-stat).
 \hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/sentics}{github.com/jsanders5/sentics}}
 
-\vspace{6pt}
+\vspace{5pt}
 
-\noindent\textbf{Resumi --- LLM Resume/Job-Matching Platform}
+\noindent\textbf{Resumi: LLM Resume/Job-Matching Platform}
 \hfill\textcolor{muted}{\small Next.js, TypeScript, Claude API, Voyage embeddings}\\
-Full-stack app that ingests postings from multiple job boards, scores each against a
-candidate's resume via the Claude API (structured JSON breakdowns across skills,
-experience, domain, and requirements), and ranks matches with semantic search over
-Voyage embeddings. Prompt caching, exponential-backoff retries, and Sentry
-observability; deployed serverless on Vercel.
+Full-stack app that scores job postings against a resume via the Claude API
+(structured JSON breakdowns across skills, experience, domain, requirements) and
+ranks matches with semantic search over Voyage embeddings. Prompt caching,
+backoff retries, and Sentry observability; deployed serverless on Vercel.
 \hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/resumi}{github.com/jsanders5/resumi}}
 
-\vspace{6pt}
+\vspace{5pt}
 
-\noindent\textbf{PySando --- Interactive Python Learning Platform}
+\noindent\textbf{PySando: Interactive Python Learning Platform}
 \hfill\textcolor{muted}{\small FastAPI, React, Claude API, pytest}\\
-Full-stack tutorial that runs learner code server-side in a resource-bounded sandbox
-and grades it against hidden pytest suites, paired with a Claude-powered tutor that
-grounds every reply in the live lesson, exercise, and the learner's current code and
-is guardrailed never to reveal solutions. Async Claude integration with multi-turn
-conversation state, provider abstraction, and graceful degradation.
+Full-stack tutorial that sandboxes and grades learner code against hidden pytest
+suites, paired with a Claude-powered tutor grounded in the live lesson, exercise,
+and learner's code, guardrailed to never reveal solutions. Async multi-turn
+conversation state, provider abstraction, graceful degradation.
 \hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/PySando}{github.com/jsanders5/PySando}}
 
 % ============================================================
