@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacob Sanders — Resume</title>
+<style>
+  :root {
+    --accent: #1B2A4A;
+    --muted: #555555;
+    --bg: #f4f5f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  header p {
+    margin: 0.15rem 0 0;
+    font-size: 0.9rem;
+    color: #cfd6e6;
+  }
+  .links a {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255,255,255,0.12);
+    padding: 0.45rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+  }
+  .links a:hover { background: rgba(255,255,255,0.22); }
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .pdf-wrap {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  embed {
+    width: 100%;
+    height: 85vh;
+    display: block;
+    border: none;
+  }
+  .fallback {
+    padding: 2rem;
+    text-align: center;
+    color: var(--muted);
+  }
+  footer {
+    text-align: center;
+    padding: 0.9rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Jacob Sanders</h1>
+    <p>Forward Deployed / Applied AI Engineer — Resume Preview</p>
+  </div>
+  <div class="links">
+    <a href="jacob_sanders_resume.pdf" download>Download PDF</a>
+    <a href="https://github.com/jsanders5/jacob-sanders-resume">View Source</a>
+  </div>
+</header>
+
+<main>
+  <div class="pdf-wrap">
+    <embed src="jacob_sanders_resume.pdf" type="application/pdf" />
+    <div class="fallback">
+      Your browser can't preview PDFs inline —
+      <a href="jacob_sanders_resume.pdf">open the PDF directly</a>.
+    </div>
+  </div>
+</main>
+
+<footer>
+  Built with LaTeX · Source at
+  <a href="https://github.com/jsanders5/jacob-sanders-resume">github.com/jsanders5/jacob-sanders-resume</a>
+</footer>
+
+</body>
+</html>
