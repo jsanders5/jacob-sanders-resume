@@ -11,6 +11,8 @@
     --bg: #f4f5f7;
   }
   * { box-sizing: border-box; }
+  :root { transition: none; }
+  header, .tab.active { transition: background 0.2s ease; }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -51,6 +53,29 @@
     display: inline-block;
   }
   .links a:hover { background: rgba(255,255,255,0.22); }
+  .switcher {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem 0;
+    flex-wrap: wrap;
+  }
+  .tab {
+    border: 1px solid var(--accent);
+    background: #fff;
+    color: var(--accent);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .tab:hover { background: rgba(0,0,0,0.04); }
+  .tab.active {
+    background: var(--accent);
+    color: #fff;
+  }
   main {
     flex: 1;
     display: flex;
@@ -90,20 +115,22 @@
 <header>
   <div>
     <h1>Jacob Sanders</h1>
-    <p>Forward Deployed / Applied AI Engineer — Resume Preview</p>
+    <p id="subtitle">Forward Deployed / Applied AI Engineer — Resume Preview</p>
   </div>
   <div class="links">
-    <a href="jacob_sanders_resume.pdf" download>Download PDF</a>
+    <a id="download" href="jacob_sanders_resume.pdf" download>Download PDF</a>
     <a href="https://github.com/jsanders5/jacob-sanders-resume">View Source</a>
   </div>
 </header>
 
+<div class="switcher" id="switcher"></div>
+
 <main>
   <div class="pdf-wrap">
-    <embed src="jacob_sanders_resume.pdf" type="application/pdf" />
+    <embed id="preview" src="jacob_sanders_resume.pdf" type="application/pdf" />
     <div class="fallback">
       Your browser can't preview PDFs inline —
-      <a href="jacob_sanders_resume.pdf">open the PDF directly</a>.
+      <a id="fallback-link" href="jacob_sanders_resume.pdf">open the PDF directly</a>.
     </div>
   </div>
 </main>
@@ -112,6 +139,59 @@
   Built with LaTeX · Source at
   <a href="https://github.com/jsanders5/jacob-sanders-resume">github.com/jsanders5/jacob-sanders-resume</a>
 </footer>
+
+<script>
+  const resumes = {
+    engineering: {
+      label: "Engineering",
+      subtitle: "Forward Deployed / Applied AI Engineer — Resume Preview",
+      file: "jacob_sanders_resume.pdf",
+      accent: "#1B2A4A",
+    },
+    starbucks: {
+      label: "Shift Supervisor",
+      subtitle: "Starbucks Shift Supervisor — Resume Preview",
+      file: "jacob_sanders_starbucks_resume.pdf",
+      accent: "#006241",
+    },
+  };
+
+  const preview = document.getElementById("preview");
+  const download = document.getElementById("download");
+  const fallbackLink = document.getElementById("fallback-link");
+  const subtitle = document.getElementById("subtitle");
+  const switcher = document.getElementById("switcher");
+
+  function select(key) {
+    const r = resumes[key];
+    if (!r) return;
+    document.documentElement.style.setProperty("--accent", r.accent);
+    // Reassign src to force a reload of the embedded PDF across browsers.
+    preview.setAttribute("src", r.file);
+    download.setAttribute("href", r.file);
+    fallbackLink.setAttribute("href", r.file);
+    subtitle.textContent = r.subtitle;
+    document.title = "Jacob Sanders — " + r.label + " Resume";
+    for (const btn of switcher.children) {
+      btn.classList.toggle("active", btn.dataset.key === key);
+    }
+    if (history.replaceState) {
+      history.replaceState(null, "", "#" + key);
+    }
+  }
+
+  for (const [key, r] of Object.entries(resumes)) {
+    const btn = document.createElement("button");
+    btn.className = "tab";
+    btn.dataset.key = key;
+    btn.textContent = r.label;
+    btn.addEventListener("click", () => select(key));
+    switcher.appendChild(btn);
+  }
+
+  const initial = resumes[location.hash.slice(1)] ? location.hash.slice(1) : "engineering";
+  select(initial);
+</script>
 
 </body>
 </html>
