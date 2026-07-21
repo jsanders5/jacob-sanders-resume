@@ -22,12 +22,16 @@
 \titleformat{\section}
   {\large\bfseries\color{accent}}
   {}{0em}{\MakeUppercase}
-  [\vspace{1pt}\color{accent}\rule{\linewidth}{0.6pt}]
+  [\vspace{-3pt}\color{accent}\rule{\linewidth}{0.6pt}]
 \titlespacing{\section}{0pt}{5pt}{2pt}
 
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=1.4em, itemsep=0pt, parsep=0pt, topsep=1pt,
   label=\textcolor{accent}{\textbullet}}
+
+\usepackage{multicol}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{1.5em}
 
 \usepackage{fontawesome5}
 \usepackage[colorlinks=true, urlcolor=accent, linkcolor=accent, hidelinks]{hyperref}
@@ -113,13 +117,20 @@ role with Starbucks.
 % ---- SKILLS ----
 \section{Skills}
 
-\noindent
-Team leadership \& delegation \enspace\textbullet\enspace Cash handling \& POS
-\enspace\textbullet\enspace Customer service \enspace\textbullet\enspace Training \& coaching
-\enspace\textbullet\enspace Inventory management \enspace\textbullet\enspace Operating \&
-safety standards \enspace\textbullet\enspace Working fast under pressure
-\enspace\textbullet\enspace Clear communication \enspace\textbullet\enspace Scheduling \&
-task coordination \enspace\textbullet\enspace Reliable attendance
+\begin{multicols}{2}
+\begin{itemize}
+  \item Team leadership \& delegation
+  \item Cash handling \& POS
+  \item Customer service
+  \item Training \& coaching
+  \item Scheduling \& task coordination
+  \item Inventory management
+  \item Operating \& safety standards
+  \item Working fast under pressure
+  \item Clear communication
+  \item Reliable attendance
+\end{itemize}
+\end{multicols}
 
 % ---- AVAILABILITY ----
 \section{Availability}
