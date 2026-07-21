@@ -1,0 +1,137 @@
+% ============================================================
+%  Jacob Sanders  --  Starbucks Shift Supervisor Resume
+%  Compiler: pdflatex (two passes for hyperref)
+% ============================================================
+\documentclass[10.5pt, letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage{microtype}
+
+\usepackage[top=0.5in, bottom=0.5in, left=0.65in, right=0.65in]{geometry}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{006241}   % Starbucks green (swap to 1B2A4A for navy)
+\definecolor{muted}{HTML}{555555}
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{\MakeUppercase}
+  [\vspace{1pt}\color{accent}\rule{\linewidth}{0.6pt}]
+\titlespacing{\section}{0pt}{5pt}{2pt}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.4em, itemsep=0pt, parsep=0pt, topsep=1pt,
+  label=\textcolor{accent}{\textbullet}}
+
+\usepackage{fontawesome5}
+\usepackage[colorlinks=true, urlcolor=accent, linkcolor=accent, hidelinks]{hyperref}
+
+\newcommand{\jobentry}[4]{%
+  \noindent
+  \textbf{\color{accent}#1}\hfill\textcolor{muted}{\small #2}\\
+  \textit{#3}\hfill\textcolor{muted}{\small #4}%
+}
+\newcommand{\jobrole}[2]{%
+  \noindent\textit{#1}\hfill\textcolor{muted}{\small #2}%
+}
+
+\begin{document}
+
+% ---- HEADER ----
+\begin{center}
+  {\fontsize{28}{32}\selectfont\bfseries\color{accent} Jacob Sanders}\\[5pt]
+  {\large\color{muted} Shift Supervisor \enspace\textbullet\enspace Team Leader \enspace\textbullet\enspace Customer Service}\\[8pt]
+  \small
+  \faMapMarker*\enspace Salt Lake City, UT area
+  \enspace\textcolor{accent}{|}\enspace
+  \faPhone\enspace \href{tel:6024865777}{602-486-5777}
+  \enspace\textcolor{accent}{|}\enspace
+  \faEnvelope\enspace \href{mailto:jtsanders87@gmail.com}{jtsanders87@gmail.com}
+\end{center}
+
+% ---- SUMMARY ----
+\section{Summary}
+
+Reliable team leader with 6+ years of retail customer service, cash handling, and
+supervisory experience, plus a track record of leading small teams in fast-paced,
+high-standard operations. Comfortable owning a shift: setting the pace, coaching
+teammates, handling the register, solving problems on the fly, and holding quality
+and safety standards high while serving customers directly. Calm under pressure and
+a fast learner who ramps quickly in any new environment. Seeking a Shift Supervisor
+role with Starbucks.
+
+% ---- EXPERIENCE ----
+\section{Experience}
+
+\jobentry{Engineering Team Lead \& Founder}{Salt Lake City, UT}%
+  {Code Corporation, Skullcandy, Honeydew (Founder), Lien Into Revenue (Co-Founder)}{2013 -- 2026}
+\begin{itemize}
+  \item Led and coordinated teams of three to five: delegated daily tasks, coached
+        teammates, and directed projects from start to finish
+  \item Served as the main point of contact for customers and partners --- listening
+        to what they needed, communicating clearly, and following through to deliver it
+  \item Trained and mentored new team members and interns, and ramped fast across very
+        different industries while staying dependable through changing priorities
+\end{itemize}
+
+\vspace{3pt}
+
+\jobentry{AutoZone}{Phoenix, AZ \& Salt Lake City, UT}{Cashier / Customer Service Rep / Inventory Specialist}{Aug 2007 -- Aug 2011}
+\begin{itemize}
+  \item Delivered friendly, knowledgeable service on a busy retail floor, helping
+        customers find the right products and resolving issues to keep them satisfied
+  \item Handled cash, card, and return transactions accurately on the register,
+        balancing the drawer and following cash-handling procedures each shift
+  \item Received and stocked shipments, tracked stock levels, and kept inventory
+        organized and accurately counted on the sales floor and in the back
+\end{itemize}
+
+\vspace{3pt}
+
+\jobentry{UPS}{Phoenix, AZ}{Cashier}{Jul 2006 -- Jul 2007}
+\begin{itemize}
+  \item Processed customer payments and shipping transactions accurately, handling cash
+        and card payments and closing out the register at the end of each shift
+  \item Provided quick, courteous counter service in a high-traffic environment
+\end{itemize}
+
+\vspace{3pt}
+\jobrole{Sort Aisle Supervisor}{Nov 2005 -- May 2006}
+\begin{itemize}
+  \item Supervised and directed a team of package handlers on a high-volume sort aisle,
+        coordinating the flow of work to meet tight throughput deadlines every shift
+  \item Trained new handlers on sorting procedures and enforced safety and operating
+        standards in a demanding, time-pressured environment
+\end{itemize}
+
+% ---- SKILLS ----
+\section{Skills}
+
+\noindent
+Team leadership \& delegation \enspace\textbullet\enspace Cash handling \& POS
+\enspace\textbullet\enspace Customer service \enspace\textbullet\enspace Training \& coaching
+\enspace\textbullet\enspace Inventory management \enspace\textbullet\enspace Operating \&
+safety standards \enspace\textbullet\enspace Working fast under pressure
+\enspace\textbullet\enspace Clear communication \enspace\textbullet\enspace Scheduling \&
+task coordination \enspace\textbullet\enspace Reliable attendance
+
+% ---- AVAILABILITY ----
+\section{Availability}
+
+\noindent
+Available for mornings, evenings, weekends, and holidays with a flexible schedule.
+Can meet minimum scheduled and availability hour requirements.
+
+% ---- EDUCATION ----
+\section{Education}
+
+\jobentry{University of Utah}{Salt Lake City, UT}%
+  {M.S., Electrical \& Computer Engineering \enspace\textbullet\enspace B.S., Computer Engineering}{2013}
+
+\end{document}
