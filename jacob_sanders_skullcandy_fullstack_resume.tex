@@ -193,22 +193,36 @@ round out the .NET and ecommerce stack this role requires.
 \section{Technical Skills}
 
 \noindent\textbf{Languages: }C\#, TypeScript, JavaScript, Python, Go, C/C++\\
-\textbf{Web / Frontend: }React, Next.js, HTML/CSS, responsive UI development\\
-\textbf{Backend / APIs: }REST \& GraphQL API design, serverless architecture
-(AWS Lambda), event-driven workflows, third-party integrations\\
-\textbf{Databases: }DynamoDB, Supabase/Postgres, relational data modeling,
-CRUD design\\
+\textbf{Web / Frontend: }React, Next.js, Shopify Liquid \& theme development,
+HTML/CSS, responsive UI development\\
+\textbf{Backend / APIs: }ASP.NET Core, EF Core, REST \& GraphQL API design,
+webhook/HMAC integrations, serverless architecture (AWS Lambda), event-driven
+workflows\\
+\textbf{Databases: }T-SQL, stored procedures, DynamoDB, Supabase/Postgres,
+relational data modeling, CRUD design\\
 \textbf{Cloud / DevOps: }AWS (Lambda, AppSync, API Gateway, DynamoDB, S3,
 CloudFront, Cognito), Vercel, Git, Docker\\
 \textbf{AI-Assisted Dev: }Claude API, Claude Code, Cursor-driven development,
 structured outputs, prompt engineering\\
-\textbf{Currently Ramping: }ASP.NET Core, Entity Framework, Microsoft SQL
-Server, Shopify Liquid \& theme architecture
+\textbf{Currently Ramping: }Production Microsoft SQL Server, live IIS
+deployment
 
 % ============================================================
 %  PROJECTS
 % ============================================================
 \section{Projects}
+
+\noindent\textbf{Shopify Inventory Sync \& Storefront Alert}\\
+\textcolor{muted}{\small ASP.NET Core, EF Core, T-SQL, Shopify Liquid, App Proxy \textbullet\
+\href{https://github.com/jsanders5/dotnet-shopify-demo}{github.com/jsanders5/dotnet-shopify-demo}}\\
+ASP.NET Core / EF Core Web API that HMAC-verifies real Shopify inventory
+webhooks and persists updates via a T-SQL stored procedure
+(\texttt{FromSqlRaw}). Paired with a Shopify Liquid storefront section --- a
+live low-stock badge served through a Shopify App Proxy --- verified
+end-to-end against a real development store, including two theme/CSS
+integration bugs found and fixed live. Configured for IIS in-process hosting.
+
+\vspace{2pt}
 
 \noindent\textbf{Sentics: Multi-Agent Crypto Signal Pipeline}\\
 \textcolor{muted}{\small Python, Claude API, Next.js, Supabase, Vercel \textbullet\
