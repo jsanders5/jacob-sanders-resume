@@ -65,3 +65,11 @@ pdflatex jacob_sanders_resume.tex   # run twice — hyperref needs a second pass
 
 Requires `texlive-fonts-extra` for the `sourcesanspro` and `fontawesome5`
 packages used in the header/icons.
+
+## GitHub Pages
+
+**Every new resume variant must be published to the GitHub Pages preview
+(`index.html`) as part of creating it — not a separate, later step.** Add it
+to the `resumes` object in the inline script (label, subtitle, PDF filename,
+accent color) so it appears as a tab in the switcher alongside the existing
+resumes. Verify the wiring (e.g. a quick DOM-shim test) before committing.
