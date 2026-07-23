@@ -202,8 +202,8 @@ workflows\\
 relational data modeling, CRUD design\\
 \textbf{Cloud / DevOps: }AWS (Lambda, AppSync, API Gateway, DynamoDB, S3,
 CloudFront, Cognito), Vercel, Git, Docker\\
-\textbf{AI-Assisted Dev: }Claude API, Claude Code, Cursor-driven development,
-structured outputs, prompt engineering\\
+\textbf{AI-Assisted Dev: }Claude API, Claude Code, Voyage AI embeddings, RAG
+(retrieval-augmented generation), structured outputs, prompt engineering\\
 \textbf{Currently Ramping: }Production Microsoft SQL Server, live IIS
 deployment
 
@@ -212,15 +212,32 @@ deployment
 % ============================================================
 \section{Projects}
 
-\noindent\textbf{Shopify Inventory Sync \& Storefront Alert}\\
-\textcolor{muted}{\small ASP.NET Core, EF Core, T-SQL, Shopify Liquid, App Proxy \textbullet\
+\noindent\textbf{Shopify Inventory Sync \& Storefront Alert (.NET / Shopify)}\\
+\textcolor{muted}{\small ASP.NET Core 8, C\#, EF Core, SQL Server-compatible,
+Shopify Liquid \& App Proxy, xUnit, Claude API, Voyage AI \textbullet\
 \href{https://github.com/jsanders5/dotnet-shopify-demo}{github.com/jsanders5/dotnet-shopify-demo}}\\
-ASP.NET Core / EF Core Web API that HMAC-verifies real Shopify inventory
-webhooks and persists updates via a T-SQL stored procedure
-(\texttt{FromSqlRaw}). Paired with a Shopify Liquid storefront section --- a
-live low-stock badge served through a Shopify App Proxy --- verified
-end-to-end against a real development store. Configured for IIS in-process
-hosting.
+A .NET 8 Web API + Shopify storefront integration built to close specific
+skill gaps against Skullcandy's own Full Stack Developer --- .NET/Shopify
+posting, plus a bonus RAG feature demonstrating applied AI-tool proficiency.
+\begin{itemize}
+  \item Built an ASP.NET Core 8 Web API with EF Core Code-First models, REST
+        endpoints, and a raw SQL stored procedure (\texttt{GetLowStockProducts},
+        via \texttt{FromSqlRaw}) against a SQL Server-compatible engine
+  \item Implemented a Shopify webhook receiver verifying HMAC-SHA256
+        signatures before persisting real \texttt{inventory\_levels/update}
+        payloads
+  \item Built a Shopify Liquid storefront customization (a live low-stock
+        badge) calling the API through a Shopify App Proxy, verified
+        end-to-end against a real development store in both directions
+  \item Added a retrieval-augmented generation feature --- Voyage AI
+        embeddings, Claude Haiku answer generation, cosine-similarity
+        retrieval --- giving shoppers grounded product answers, with a live
+        side-by-side comparison against an ungrounded baseline
+  \item Used Claude Code in a structured spec/plan/implementation/automated-review
+        workflow to build and ship the project
+  \item xUnit tests covering CRUD, webhook verification, and the RAG
+        endpoint; public GitHub repo with full commit history
+\end{itemize}
 
 \vspace{2pt}
 
