@@ -33,7 +33,7 @@
   {\large\bfseries\color{accent}}
   {}{0em}{\MakeUppercase}
   [\vspace{1pt}\color{accent}\rule{\linewidth}{0.6pt}]
-\titlespacing{\section}{0pt}{6pt}{3pt}
+\titlespacing{\section}{0pt}{5pt}{2pt}
 
 % ---- Lists --------------------------------------------------
 \usepackage{enumitem}
@@ -96,15 +96,39 @@
 \section{Summary}
 
 Full-stack developer with 13+ years building products where software meets
-physical hardware. Nine of those years were spent in firmware and embedded
-systems, from board bring-up through production release, and the last several
-building the application layer on top: Flutter/Dart cross-platform apps, React
+physical hardware. Nine of those years were spent in real-time embedded systems
+and firmware, covering Bluetooth Low Energy, USB and serial communication, and
+the host-to-device protocols between them, from board bring-up through
+production release. The last several have gone to the application layer on top: Flutter/Dart cross-platform apps, React
 and Next.js web apps, and the REST and GraphQL services, relational schemas, and
 cloud infrastructure behind them. Has worked alongside mechanical, electrical,
 manufacturing, and QA engineers for most of his career, including as primary
 liaison to Apple's MFi program office. Comfortable debugging across the
 software, firmware, and hardware boundary, and used to owning a product from
 prototype through production.
+
+% ============================================================
+%  SYSTEMS & HARDWARE INTEGRATION
+% ============================================================
+\section{Systems \& Hardware Integration}
+
+\begin{itemize}
+  \item \textbf{Bluetooth / BLE:} Bluetooth Low Energy firmware for the Nordic
+        nRF52832 SoC, including the host-to-device communication protocol;
+        architected embedded firmware across a portfolio of Bluetooth audio products
+  \item \textbf{USB \& serial communication:} C\# desktop application performing USB
+        firmware updates on consumer audio hardware; USB Mass Storage optimization
+        cutting firmware upgrade time from $\sim$3 min to $\sim$60 sec
+  \item \textbf{Embedded systems:} 9 years as Senior Firmware Engineer and Firmware
+        Architect, taking consumer audio and industrial scanning hardware from
+        board bring-up through production release
+  \item \textbf{Firmware communication \& device protocols:} host-to-device protocol
+        design; an embedded JavaScript engine that let customers reconfigure device
+        behavior in the field without shipping a firmware release
+  \item \textbf{Real-time systems:} real-time firmware for barcode scanning and
+        consumer audio products; Linux kernel drivers for image sensor and
+        GPIO/PWM timing
+\end{itemize}
 
 % ============================================================
 %  EXPERIENCE
@@ -125,7 +149,7 @@ prototype through production.
         feature through release and post-release support
 \end{itemize}
 
-\vspace{5pt}
+\vspace{3pt}
 
 \jobentry{ARK Electronics}{Remote}{Full-Stack Engineer \normalfont\small(1099 Contract)}{February 2025 -- April 2025}
 \begin{itemize}
@@ -141,7 +165,7 @@ prototype through production.
         during the build
 \end{itemize}
 
-\vspace{5pt}
+\vspace{3pt}
 
 \jobentry{The Honeydew App, Inc.}{Salt Lake City, UT}{Founder}{April 2023 -- February 2025}
 \begin{itemize}
@@ -157,25 +181,23 @@ prototype through production.
         high-fidelity mockups
 \end{itemize}
 
-\vspace{5pt}
+\vspace{3pt}
 
 \jobentry{Nerd United}{Lehi, UT (Hybrid)}{Blockchain Engineer}{April 2022 -- April 2023}
 \begin{itemize}
   \item Developed applications in Go and Solidity on EVM-based protocols; deployed
-        and operated 8 Proof-of-Authority test networks and 4 production networks
-        with security controls and access enforcement across infrastructure
-  \item Built a production Python pipeline orchestrating an image-generation API,
-        IPFS pinning, and contract deployment as an automated multi-step workflow
+        and operated 8 Proof-of-Authority test networks and 4 production networks,
+        and built a production Python pipeline orchestrating an image-generation
+        API, IPFS pinning, and contract deployment as an automated workflow
 \end{itemize}
 
-\vspace{5pt}
+\vspace{3pt}
 
 \jobentry{Skullcandy}{Park City, UT}{Firmware Architect}{October 2018 -- March 2022}
 \begin{itemize}
-  \item Authored a C\# desktop application that performed USB firmware updates on
-        consumer audio hardware, replacing a manual process, and paired it with a
-        Python CLI build toolchain and automated regression tests that cut
-        nightly validation cycles
+  \item Authored a C\# desktop application for USB firmware updates and a Python
+        CLI build toolchain with automated regression tests, replacing a manual
+        process and cutting nightly validation cycles
   \item Architected embedded firmware across a portfolio of Bluetooth audio
         products, establishing platform-wide design patterns and coding standards
         that improved code quality and reduced per-product bring-up time
@@ -186,7 +208,7 @@ prototype through production.
         partners
 \end{itemize}
 
-\vspace{5pt}
+\vspace{3pt}
 
 \jobentry{Code Corporation}{Draper, UT}{Senior Firmware Engineer}{August 2013 -- October 2018}
 \begin{itemize}
@@ -194,10 +216,8 @@ prototype through production.
         bring-up through production release, driving Agile/Scrum adoption within
         the team
   \item Implemented a secure bootloader and Bluetooth Low Energy firmware for the
-        Nordic nRF52832 SoC, including the host-to-device communication protocol
-  \item Contributed Linux kernel patches for image sensor, GPIO/PWM, and USB Mass
-        Storage support, and cut firmware upgrade time from $\sim$3 min to
-        $\sim$60 sec through USB Mass Storage optimization
+        Nordic nRF52832 SoC, and contributed Linux kernel patches for image sensor,
+        GPIO/PWM, and USB Mass Storage support
   \item Integrated a JavaScript engine into device firmware for runtime-configurable
         behavior, letting customers change device logic in the field without a
         firmware release
@@ -237,31 +257,19 @@ prototype through production.
 
 \noindent\textbf{Shopify Inventory Sync \& Storefront Alert}
 \hfill\textcolor{muted}{\small ASP.NET Core 8, EF Core, T-SQL, xUnit}\\
-An ASP.NET Core 8 / EF Core Web API that HMAC-verifies real inventory webhooks
-and persists updates through a T-SQL stored procedure, paired with a storefront
-badge served over a reverse-proxied endpoint and verified end-to-end against a
-live store. xUnit-tested.
+ASP.NET Core 8 / EF Core Web API that HMAC-verifies live inventory webhooks and
+persists updates through a T-SQL stored procedure; xUnit-tested and verified
+end-to-end against a real store.
 \hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/dotnet-shopify-demo}{github.com/jsanders5/dotnet-shopify-demo}}
 
-\vspace{5pt}
+\vspace{3pt}
 
 \noindent\textbf{PySando: Interactive Python Learning Platform}
 \hfill\textcolor{muted}{\small React, TypeScript, FastAPI, pytest}\\
 React frontend over a FastAPI backend that runs learner code in a sandboxed
-subprocess and grades it against hidden pytest suites, paired with an
-LLM-powered tutor grounded in the live lesson and guardrailed to never reveal
-solutions. Async multi-turn state and graceful degradation without an API key.
+subprocess and grades it against hidden pytest suites, paired with an LLM tutor
+grounded in the live lesson and guardrailed to never reveal solutions.
 \hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/PySando}{github.com/jsanders5/PySando}}
-
-\vspace{5pt}
-
-\noindent\textbf{Resumi: LLM Resume/Job-Matching Platform}
-\hfill\textcolor{muted}{\small Next.js, React, TypeScript, Sentry}\\
-Full-stack Next.js app that scores job postings against a resume via structured
-JSON model output and ranks matches with semantic search over vector embeddings.
-Server-side rate limiting, backoff retries, and Sentry observability; deployed
-on Vercel.
-\hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/resumi}{github.com/jsanders5/resumi}}
 
 % ============================================================
 %  EDUCATION
