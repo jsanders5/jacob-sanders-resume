@@ -1,0 +1,286 @@
+% ============================================================
+%  Jacob Sanders Resume - Senior Forward Deployed Engineer (BambooHR)
+%  Compiler: pdflatex (two passes for hyperref)
+%  Last updated: 2026
+% ============================================================
+\documentclass[10.5pt, letterpaper]{article}
+
+% ---- Encoding & font ----------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage{microtype}
+
+% ---- Layout -------------------------------------------------
+\usepackage[
+  top=0.45in,
+  bottom=0.45in,
+  left=0.6in,
+  right=0.6in
+]{geometry}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ---- Color --------------------------------------------------
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1B2A4A}   % deep navy
+\definecolor{muted}{HTML}{555555}
+
+% ---- Section headings ---------------------------------------
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{\MakeUppercase}
+  [\vspace{1pt}\color{accent}\rule{\linewidth}{0.6pt}]
+\titlespacing{\section}{0pt}{4pt}{2pt}
+
+% ---- Lists --------------------------------------------------
+\usepackage{enumitem}
+\setlist[itemize]{
+  leftmargin=1.4em,
+  itemsep=0.5pt,
+  parsep=0pt,
+  topsep=2pt,
+  label=\textcolor{accent}{\textbullet}
+}
+
+% ---- Icons & links ------------------------------------------
+\usepackage{fontawesome5}
+\usepackage[
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  hidelinks
+]{hyperref}
+
+% ---- Table (skills) -----------------------------------------
+\usepackage{tabularx}
+\newcolumntype{L}{>{\bfseries}p{1.55in}}
+\newcolumntype{R}{p{5.15in}}
+
+% ============================================================
+%  Custom commands
+% ============================================================
+
+\newcommand{\jobentry}[4]{%
+  \noindent
+  \textbf{\color{accent}#1}\hfill\textcolor{muted}{\small #2}\\
+  \textit{#3}\hfill\textcolor{muted}{\small #4}%
+}
+
+% ============================================================
+\begin{document}
+
+% ============================================================
+%  HEADER
+% ============================================================
+\begin{center}
+  {\fontsize{28}{32}\selectfont\bfseries\color{accent} Jacob Sanders}\\[5pt]
+  {\large\color{muted} Senior Forward Deployed Engineer}\\[8pt]
+  \small
+  \faMapMarker\enspace Salt Lake City, UT
+  \enspace\textcolor{accent}{|}\enspace
+  \faPhone\enspace \href{tel:6024865777}{602-486-5777}
+  \enspace\textcolor{accent}{|}\enspace
+  \faEnvelope\enspace \href{mailto:jtsanders87@gmail.com}{jtsanders87@gmail.com}
+  \enspace\textcolor{accent}{|}\enspace
+  \faLinkedin\enspace \href{https://linkedin.com/in/jacob-t-sanders}{linkedin.com/in/jacob-t-sanders}
+\end{center}
+
+\vspace{2pt}
+
+% ============================================================
+%  SUMMARY
+% ============================================================
+\section{Summary}
+
+Applied AI engineer and two-time founder who has shipped production software
+end-to-end for 13+ years, from board bring-up to cloud-native SaaS. Works the way
+forward deployed engagements run: scope a vague problem directly with the people
+who have it, build and ship autonomously in weeks, then document it for whoever
+maintains it next. Ships production LLM applications on the Claude API,
+including multi-stage pipelines, structured extraction, semantic search, output
+guardrails, and a leak-free evaluation harness that scores live model calls
+against realized outcomes. Builds daily with Claude Code in a spec/plan/review
+loop and writes the repo context files that make coding agents execute reliably.
+Comfortable reading unfamiliar code and root-causing across the stack, with
+production experience in TypeScript, Python, C\#, Go, and C/C++.
+
+% ============================================================
+%  APPLIED AI ENGINEERING
+% ============================================================
+\section{Applied AI Engineering}
+
+\begin{itemize}
+  \item \textbf{Context engineering:} Builds daily with Claude Code in a structured
+        spec/plan/review loop, maintaining repo context files, scoped task specs,
+        and documented conventions so coding agents execute reliably across sessions
+  \item \textbf{Evaluation harnesses:} Built a leak-free forward-tracking eval harness
+        that logs every model call to an immutable ledger and scores live calls
+        against realized outcomes (edge, hit-rate, Sharpe, t-stat), separating model
+        quality from noise
+  \item \textbf{Guardrails \& generated-output safety:} Constrains model output with
+        strict whitelists that prevent an LLM stage from overriding a deterministic
+        ground-truth classification, and grounds a tutoring assistant so it cannot
+        leak solutions; HMAC-verified webhooks, row-level access rules, and
+        multi-tenant isolation on the data-handling side
+  \item \textbf{LLM application delivery:} Ships production multi-stage LLM pipelines
+        on the Claude API: structured JSON extraction, semantic search over
+        embeddings, prompt caching, model tiering for cost (88\% run-cost reduction),
+        backoff retries, and Sentry observability
+  \item \textbf{Customer-facing delivery:} Embeds with clients to scope from scratch
+        and ship end-to-end in weeks, translating between non-technical stakeholders
+        and the system being built
+\end{itemize}
+
+% ============================================================
+%  EXPERIENCE
+% ============================================================
+\section{Experience}
+
+\jobentry{Lien Into Revenue Services, LLC}{Remote}{Co-Founder / Lead Engineer}{August 2025 -- Present}
+\begin{itemize}
+  \item Co-founded and shipped a production SaaS platform end-to-end that manages the
+        full personal-injury lien lifecycle for chiropractic practices, from patient
+        intake through negotiation and settlement collection
+  \item Scope features directly with the non-technical stakeholders who use the
+        product, then own each one through implementation, release, and post-release
+        support and triage
+  \item Built the Next.js/React/TypeScript frontend on a serverless AWS backend
+        (Lambda, AppSync GraphQL, DynamoDB, Cognito, S3) deployed as TypeScript
+        infrastructure-as-code, with role-based multi-tenant access rules
+  \item Ship under safe release practice: Jest and React Testing Library unit tests,
+        Playwright end-to-end suites, code review, CI/CD, semantic versioning, and
+        per-branch deploy environments so changes roll forward and back independently
+\end{itemize}
+
+\vspace{3pt}
+
+\jobentry{ARK Electronics}{Remote}{Full-Stack Engineer \normalfont\small(1099 Contract)}{February 2025 -- April 2025}
+\begin{itemize}
+  \item Ran the full engagement cycle as an embedded contractor: discovery and scoping
+        from scratch with the client, then shipping a cloud-based manufacturing
+        traceability platform end-to-end in weeks, covering product setup, serial
+        number generation, barcode artifacts, and test-result tracking
+  \item Built a React/TypeScript frontend and a serverless AWS backend exposing dual
+        API surfaces, GraphQL for the web UI and REST for external clients, with API
+        key management, usage plans, throttling, and event-driven status updates
+  \item Translated shop-floor process from manufacturing and QA staff into working
+        software, adjusting scope as requirements sharpened during the build
+\end{itemize}
+
+\vspace{3pt}
+
+\jobentry{The Honeydew App, Inc.}{Salt Lake City, UT}{Founder}{April 2023 -- February 2025}
+\begin{itemize}
+  \item Founded an on-demand services marketplace; owned all system architecture and
+        the majority of engineering while directing 4 University of Utah CS interns
+        across frontend and backend workstreams
+  \item Built a Flutter (MVVM) consumer application on a serverless TypeScript and
+        Supabase/PostgreSQL backend, designing the relational schema, authentication,
+        row-level access rules, and real-time job dispatch
+\end{itemize}
+
+\vspace{3pt}
+
+\jobentry{Nerd United}{Lehi, UT (Hybrid)}{Blockchain Engineer}{April 2022 -- April 2023}
+\begin{itemize}
+  \item Built and deployed a production generative-AI pipeline in Python,
+        orchestrating an image-generation API, IPFS pinning, and ERC-721 contract
+        deployment as an automated multi-step workflow
+  \item Developed applications in Go and Solidity on EVM-based protocols; deployed
+        and operated 8 Proof-of-Authority test networks and 4 production networks
+\end{itemize}
+
+\vspace{3pt}
+
+\jobentry{Skullcandy}{Park City, UT}{Firmware Architect}{October 2018 -- March 2022}
+\begin{itemize}
+  \item Led 3--5 engineers through the full product lifecycle from prototype to
+        mass-production release, and served as primary liaison to Apple's MFi program
+        office, translating technical constraints for executives, product managers,
+        and non-technical partners
+  \item Authored a C\# desktop application for USB firmware updates and a Python CLI
+        build toolchain with automated regression tests, replacing a manual process
+        and compressing nightly validation cycles
+  \item Established platform-wide design patterns and coding standards across a
+        portfolio of products, judging when to build custom and when to extend an
+        existing pattern for reuse
+  \item Gated product features behind flags resolved from a hardware capability
+        manifest, and routed firmware upgrades down separate tracks keyed on hardware
+        ID and installed version to ship a non-backward-compatible hardware revision
+        that broadcast the same device identifier
+\end{itemize}
+
+\vspace{3pt}
+
+\jobentry{Code Corporation}{Draper, UT}{Senior Firmware Engineer}{August 2013 -- October 2018}
+\begin{itemize}
+  \item Led 3--4 engineers building advanced barcode reading systems from board
+        bring-up through production release; drove Agile/Scrum adoption in the team
+  \item Implemented a secure bootloader and BLE firmware for the Nordic nRF52832 SoC,
+        contributed Linux kernel patches, and integrated a JavaScript engine into
+        device firmware so customers could reconfigure behavior without a release
+\end{itemize}
+
+% ============================================================
+%  TECHNICAL SKILLS
+% ============================================================
+\section{Technical Skills}
+
+\begin{tabularx}{\linewidth}{@{}LR@{}}
+  AI / LLM            & Claude API (Anthropic SDK), multi-stage LLM pipelines, context
+                        engineering (spec/plan/review, repo context files), evaluation
+                        harnesses \& backtesting, structured outputs, semantic search
+                        (embeddings), guardrails \& output whitelists, prompt caching,
+                        model tiering \& cost optimization \\[3pt]
+  Languages           & TypeScript, Python, C\#, Go, C, C++, Dart, Swift, Kotlin \\[3pt]
+  Web / Mobile        & Next.js, React, Flutter (MVVM), TypeScript, Vite, GraphQL, Figma \\[3pt]
+  Cloud / Backend     & AWS (Lambda, AppSync, API Gateway, DynamoDB, Cognito, S3,
+                        Amplify), Supabase/PostgreSQL, FastAPI, ASP.NET Core, REST \&
+                        GraphQL API design, data modeling \& schema design \\[3pt]
+  Testing \& Release  & pytest, xUnit, Jest, React Testing Library, Playwright (E2E),
+                        LLM eval harnesses, CI/CD, feature flags, per-branch deploy
+                        environments, semantic versioning, code review, Agile/Scrum \\[3pt]
+  Security \& Data    & HMAC webhook verification, Cognito auth, row-level access
+                        rules, multi-tenant isolation, API key management \& throttling \\[3pt]
+  Embedded / HW       & BLE/Bluetooth, Apple MFi/iAP2, USB (Mass Storage, HID),
+                        SPI/I2C/UART, RTOS, bare-metal ARM \\[3pt]
+\end{tabularx}
+
+% ============================================================
+%  PROJECTS
+% ============================================================
+\section{Projects}
+
+\noindent\textbf{Sentics: Multi-Stage LLM Signal Pipeline}
+\hfill\textcolor{muted}{\small Python, Claude API, Next.js, Supabase/PostgreSQL}\\
+Serverless pipeline screening top crypto assets. A deterministic
+technical-analysis stage owns the directional call; a Claude stage writes
+rationale under a strict output whitelist that cannot override it; a cheaper
+stage distills news into structured sentiment. Model-tiered for cost (88\%
+run-cost reduction), with a leak-free forward-tracking eval harness scoring
+live calls against realized returns.
+\hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/sentics}{github.com/jsanders5/sentics}}
+
+\vspace{3pt}
+
+\noindent\textbf{PySando: Interactive Python Learning Platform}
+\hfill\textcolor{muted}{\small FastAPI, React, Claude API, pytest}\\
+Runs learner code in a sandboxed subprocess and grades it against hidden pytest
+suites, paired with a Claude tutor grounded in the live lesson, exercise, and
+learner code, guardrailed to never reveal solutions. Async multi-turn state and
+provider abstraction.
+\hfill\textcolor{muted}{\small\href{https://github.com/jsanders5/PySando}{github.com/jsanders5/PySando}}
+
+% ============================================================
+%  EDUCATION
+% ============================================================
+\section{Education}
+
+\jobentry{University of Utah}{Salt Lake City, UT}%
+  {M.S., Electrical \& Computer Engineering \enspace\textbullet\enspace
+   B.S., Computer Engineering}{2013}
+
+\end{document}
